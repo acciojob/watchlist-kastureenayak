@@ -43,17 +43,25 @@ public class MovieRepository {
 
     public Movie findMovie(String movie){
         // your code here
+        if(movieMap.containsKey(movie))
         return movieMap.get(movie);
+        else
+            return new Movie();
     }
 
     public Director findDirector(String director){
         // your code here
+        if(directorMap.containsKey(director))
         return directorMap.get(director);
+        else
+            return new Director();
     }
 
     public List<String> findMoviesFromDirector(String director){
         // your code here
+        if(directorMovieMapping.containsKey(director))
         return directorMovieMapping.get(director);
+        return new ArrayList<>();
     }
 
     public List<String> findAllMovies(){
