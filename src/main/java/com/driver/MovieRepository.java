@@ -34,6 +34,11 @@ public class MovieRepository {
             temp.add(movie);
             directorMovieMapping.put(director,temp);
         }
+        else{
+            List<String> temp=new ArrayList<>();
+            temp.add(movie);
+            directorMovieMapping.put(director,temp);
+        }
     }
 
     public Movie findMovie(String movie){
